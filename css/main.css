@@ -1,0 +1,331 @@
+/* variabels */
+/* ******************** */
+/* extend */
+.float, .navbar ul, .navbar .logo {
+  width: 50%;
+  float: left;
+}
+
+.h1, .touch h1, .download h1, .services h1, .need .homeContent h1, .home .homeContent h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.span, .touch span, .services span, .need .homeContent span, .home .homeContent span {
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin: 20px auto;
+  background: #f05f40;
+}
+
+.p, .touch p, .services .service-parent .ser p, .need .homeContent p, .home .homeContent p {
+  width: 80%;
+  margin: auto;
+  line-height: 1.5;
+  color: #a4a4a4;
+}
+
+.button-p, .home .homeContent button {
+  padding: 15px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #f05f40;
+  border-radius: 25px;
+  margin: 30px 0;
+  border: 1px solid #f05f40;
+  outline: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button-p:hover, .home .homeContent button:hover {
+  background-color: #fff;
+  color: #f05f40;
+  transition: 0.5s all ease-in-out;
+  border: 1px solid #fff;
+}
+
+.button-s, .download button, .need .homeContent button {
+  padding: 15px 20px;
+  color: #191b1d;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 30px 0;
+  border: 1px solid #f05f40;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+}
+.button-s:hover, .download button:hover, .need .homeContent button:hover {
+  background-color: #191b1d;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+  border: 1px solid #fff;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* **************** */
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+  padding: 0 0 15px 0;
+  width: 100%;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar .logo {
+  margin-top: 1rem;
+}
+.navbar ul {
+  display: flex;
+  margin-top: 1.3rem;
+  list-style: none;
+}
+.navbar ul li {
+  padding: 0 10px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #fff;
+}
+.navbar ul li a.active {
+  color: #ffd;
+}
+.navbar ul li a:hover {
+  color: #f05f40;
+  transition: 0.5s all ease-in-out;
+}
+
+.nav2 {
+  background: rgba(25, 27, 29, 0.9);
+  display: none;
+}
+
+/* ********************** */
+.home {
+  background: url(../img/portfolio_big_05.jpg);
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+.home .over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.home .homeContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home .homeContent button {
+  transition: 0.5s all ease-in-out;
+}
+
+/* ***************************** */
+.need {
+  text-align: center;
+  padding-top: 70px;
+  background-color: #f05f40;
+  padding-bottom: 70px;
+}
+.need .homeContent span {
+  background: #fff;
+}
+.need .homeContent p {
+  color: #fff;
+  width: 60%;
+  margin: auto;
+}
+.need .homeContent button {
+  margin-bottom: 0;
+}
+
+/* **************************** */
+.services {
+  padding: 70px 0;
+  text-align: center;
+}
+.services h1 {
+  color: #191b1d;
+}
+.services .service-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+.services .service-parent .ser {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.services .service-parent .ser i {
+  color: #f05f40;
+  transition: 0.5s all ease-in-out;
+}
+.services .service-parent .ser h2 {
+  margin: 1rem 0;
+  font-weight: normal;
+  transition: 0.5s all ease-in-out;
+}
+.services .service-parent .ser:hover i {
+  color: #191b1d;
+  transition: 0.5s all ease-in-out;
+}
+.services .service-parent .ser:hover h2 {
+  color: #f05f40;
+  transition: 0.5s all ease-in-out;
+}
+
+/* ********************** */
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 0;
+}
+.images > div {
+  position: relative;
+  cursor: pointer;
+}
+.images > div img {
+  width: 100%;
+  height: 100%;
+}
+.images > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 95, 64, 0.5);
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+.images > div:hover::after {
+  opacity: 1;
+}
+
+/* ************************* */
+.download {
+  padding: 3.5rem;
+  text-align: center;
+  background-color: #191b1d;
+}
+.download h1 {
+  font-size: 1.2rem;
+}
+.download button {
+  border-color: #191b1d;
+  transition: 0.5s all ease-in-out;
+}
+
+.touch {
+  padding: 5rem 0;
+  text-align: center;
+}
+.touch h1 {
+  color: #191b1d;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.touch p {
+  width: 40%;
+  margin: auto;
+}
+.touch .getTouch {
+  display: flex;
+  justify-content: center;
+  color: #191b1d;
+}
+.touch .getTouch .icon {
+  margin: 0 1.5rem;
+}
+.touch .getTouch .icon a {
+  text-decoration: none;
+  color: #f05f40;
+}
+.touch .getTouch i {
+  margin: 2rem 0 1rem 0;
+}
+
+/* ******************** */
+@media (max-width: 575px) {
+  .navbar {
+    text-align: center;
+    display: block;
+    position: static;
+  }
+  .navbar .float, .navbar .logo, .navbar ul {
+    width: 100%;
+    float: none;
+  }
+  .navbar ul {
+    display: block;
+  }
+  .navbar ul li {
+    margin-bottom: 20px;
+  }
+  .navbar ul li a {
+    transition: 0.5s all ease-in-out;
+  }
+  .navbar ul li a:hover {
+    background: #f05f40;
+    color: #fff;
+    transition: 0.5s all ease-in-out;
+  }
+  .nav1{
+    background-color: #f05f40;
+
+  }
+  .nav2{
+    display: none !important;
+  }
+
+  .h1, .home .homeContent h1, .need .homeContent h1, .services h1, .download h1, .touch h1 {
+    font-size: 1.5rem;
+  }
+
+  .services .service-parent {
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .download h1 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 1000px) {
+  .services .service-parent {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+}
